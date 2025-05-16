@@ -65,5 +65,16 @@ for i in range(len(preguntas)):
 print(f"\nObtuviste {puntos} de {len(preguntas)} respuestas correctas.")
 
 print("los temas disponibles son los siguientes:")
+print("1 - decimales")
+print("2 - division")
+print("3 - Minimo comun multiplo")
+print("4 - factorización")
+print("5 - porcentajes")
+print("6 - logaritmo")
 
-ayuda=input("¿En que tema deseas que te ayude?")
+ayuda=int(input("¿En que tema deseas que te ayude?"))
+if ayuda==1:
+    print("Los números decimales son una forma de escribir los números" 
+    " que están entre los números enteros. Se usan para contar partes más" 
+    " pequeñas que uno, como cuando dividimos algo. Llevan una coma (o punto, según el país)" \
+    " para separar la parte entera de la parte decimal.")
