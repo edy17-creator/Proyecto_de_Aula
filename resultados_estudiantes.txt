@@ -1,0 +1,12 @@
+Nombre: emanuel
+ID: 1043653730
+Curso: 34
+Edad: 18
+Puntaje: 5 de 15
+----------------------------------------
+Nombre: emanuel
+ID: 1043653730
+Curso: 34
+Edad: 18
+Puntaje: 5 de 15
+----------------------------------------
