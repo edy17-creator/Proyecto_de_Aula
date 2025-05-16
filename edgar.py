@@ -61,6 +61,13 @@ for i in range(len(preguntas)):
     respuesta = input("Tu respuesta: ").lower()
     puntos += respuesta == respuestas_correctas[i]
 
+    while respuesta not in ["a","b","c","d"]:
+        print("Escoja una opción valida (a,b,c,d)")
+        respuesta=input("tu respueta: ").lower()
+    
+    if respuesta==respuestas_correctas[i]:
+        puntos+=1
+
 # Resultado
 print(f"\nObtuviste {puntos} de {len(preguntas)} respuestas correctas.")
 
@@ -72,9 +79,43 @@ print("4 - factorización")
 print("5 - porcentajes")
 print("6 - logaritmo")
 
-ayuda=int(input("¿En que tema deseas que te ayude?"))
+ayuda=int(input("¿En que tema deseas que te ayude? "))
 if ayuda==1:
-    print("Los números decimales son una forma de escribir los números" 
-    " que están entre los números enteros. Se usan para contar partes más" 
-    " pequeñas que uno, como cuando dividimos algo. Llevan una coma (o punto, según el país)" \
-    " para separar la parte entera de la parte decimal.")
+    print("Tema: los numeros decimales")
+    print("""Los números decimales son una forma de escribir los números que están entre
+     los números enteros. Se usan para contar partes más pequeñas que uno, como cuando
+     dividimos algo. Llevan una coma (o punto, según el país) para separar la parte
+     entera de la parte decimal.""")
+    
+    print("""ejemplos
+          Ejemplo 1: Jugo
+Tienes 1,5 litros de jugo.
+
+Esto significa que tienes 1 litro entero y medio litro más.
+
+🍫 Ejemplo 2: Chocolate
+Un chocolate cuesta 2,75 euros.
+
+Eso significa que cuesta 2 euros y 75 céntimos.
+
+📏 Ejemplo 3: Regla
+Una regla mide 30,5 centímetros.
+
+Eso quiere decir 30 centímetros y medio centímetro más.
+
+🕓 Ejemplo 4: Tiempo
+Viste una película que duró 1,25 horas.
+
+Eso es 1 hora y un cuarto de hora (15 minutos).
+
+🧁 Ejemplo 5: Pastel
+Cortaste un pastel y te comiste 0,5 del pastel.
+
+Eso significa que te comiste la mitad del pastel.""")
+    print("aqui tienes una lista de videos que te podran ayudar con tu problematica:")
+    print("")
+    print()
+elif ayuda==2:
+    print("Tema: la división")
+    print("a continuación te dejare un pequeño concepto")
+    print("")
