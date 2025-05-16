@@ -14,6 +14,7 @@ print("-1 Estudiante")
 print("-2 Docente")
 print("-3 padre de familia")
 print("-4 recepcionista")
+print("-5 salir")
 
 opcion=int(input("Elija un tipo de usuario: "))
 
@@ -63,29 +64,12 @@ if opcion == 1:
     ]
 
     respuestas_correctas = [
-        "c",  # 48
-        "c",  # 2400
-        "b",  # 28
-        "c",  # 18
-        "b",  # 40 cm²
-        "b",  # 1
-        "b",  # 9
-        "c",  # 15
-        "a",  # 16
-        "c",  # 240 km
-        "a",  # x = 7
-        "a",  # x < 3
-        "b",  # x = 12
-        "a",  # (x + 3)(x - 3)
-        "a"   # x = 2 y x = -4
+        "c","c","b","c","b","b","b","c","a","c","a","a","b","a","a"
     ]
-
-puntos = 0
-
-puntos = 0
-
-for i in range(len(preguntas)):
-    print(f"\nPregunta {i+1}: {preguntas[i]}")
+    puntos = 0
+    puntos = 0
+    for i in range(len(preguntas)):
+        print(f"\nPregunta {i+1}: {preguntas[i]}")
     for opcion in opciones[i]:
         print(opcion)
     
@@ -97,12 +81,15 @@ for i in range(len(preguntas)):
     
     if respuesta == respuestas_correctas[i]:
         puntos += 1
-
-print(f"\nTu puntuación final es: {puntos} de {len(preguntas)}")
-
-
-# Resultado
-print(f"\nObtuviste {puntos} de {len(preguntas)} respuestas correctas.")
+        print(f"\nTu puntuación final es: {puntos} de {len(preguntas)}")
+        print(f"\nObtuviste {puntos} de {len(preguntas)} respuestas correctas.")
 
 
-#if opcion==2:
+elif opcion==2:
+    print("hola mundo")
+elif opcion==3:
+    print("hola mundo")
+elif opcion==4:
+    print("hola mundo")
+else:
+    print("Usted a salido de exitosamente ")
