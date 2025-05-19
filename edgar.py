@@ -1,9 +1,17 @@
+import os 
+def limpiar_pantalla():
+    if os.name=='nt':
+       os.system('cls')
+    else:
+       os.system('clear')
+
 print("bienvenido a nuestro programa")
 print("esta es una pagina dirigida a la educación matemática en los jovenes")
 nombre=input("ingrese su nombre: ")
 Nidentidad=input("ingrese su numero de identidad: ")
 grado=input("ingrese el grado que está cursando: ")
-edad=int(input("ingrese su edad(se admite entrew el rango de 12 a 19 años): "))
+edad=int(input("ingrese su edad(se admite entre el rango de 12 a 19 años): "))
+limpiar_pantalla()
 
 if edad<=12:
     print("Usted no tiene la edad minima (de 12 a 19 años) ")
@@ -17,6 +25,7 @@ print("-2 Docente")
 print("-3 recepcionista")
 
 opcion=int(input("Elija un tipo de usuario: "))
+limpiar_pantalla()
 
 if opcion==1:
     preguntas = [
@@ -70,52 +79,81 @@ for i in range(len(preguntas)):
 
 # Resultado
 print(f"\nObtuviste {puntos} de {len(preguntas)} respuestas correctas.")
+yes=False
+while yes==True:
+  print("los temas disponibles son los siguientes:")
+  print("1 - decimales")
+  print("2 - division")
+  print("3 - Minimo comun multiplo")
+  print("4 - factorización")
+  print("5 - porcentajes")
+  print("6 - logaritmo")
 
-print("los temas disponibles son los siguientes:")
-print("1 - decimales")
-print("2 - division")
-print("3 - Minimo comun multiplo")
-print("4 - factorización")
-print("5 - porcentajes")
-print("6 - logaritmo")
-
-ayuda=int(input("¿En que tema deseas que te ayude? "))
+  ayuda=int(input("¿En que tema deseas que te ayude? "))
+limpiar_pantalla()
 if ayuda==1:
-    print("Tema: los numeros decimales")
-    print("""Los números decimales son una forma de escribir los números que están entre
+      print("Tema: los numeros decimales")
+      print("""Los números decimales son una forma de escribir los números que están entre
      los números enteros. Se usan para contar partes más pequeñas que uno, como cuando
      dividimos algo. Llevan una coma (o punto, según el país) para separar la parte
      entera de la parte decimal.""")
-    
-    print("""ejemplos
+      print("""ejemplos
           Ejemplo 1: Jugo
-Tienes 1,5 litros de jugo.
+          Tienes 1,5 litros de jugo.
 
-Esto significa que tienes 1 litro entero y medio litro más.
+          Esto significa que tienes 1 litro entero y medio litro más.
 
-🍫 Ejemplo 2: Chocolate
-Un chocolate cuesta 2,75 euros.
+          🍫 Ejemplo 2: Chocolate
+          Un chocolate cuesta 2,75 euros.
 
-Eso significa que cuesta 2 euros y 75 céntimos.
+          Eso significa que cuesta 2 euros y 75 céntimos.
 
-📏 Ejemplo 3: Regla
-Una regla mide 30,5 centímetros.
+          📏 Ejemplo 3: Regla
+         Una regla mide 30,5 centímetros.
 
-Eso quiere decir 30 centímetros y medio centímetro más.
+         Eso quiere decir 30 centímetros y medio centímetro más.
 
-🕓 Ejemplo 4: Tiempo
-Viste una película que duró 1,25 horas.
+         🕓 Ejemplo 4: Tiempo
+         Viste una película que duró 1,25 horas.
 
-Eso es 1 hora y un cuarto de hora (15 minutos).
+         Eso es 1 hora y un cuarto de hora (15 minutos).
 
-🧁 Ejemplo 5: Pastel
-Cortaste un pastel y te comiste 0,5 del pastel.
+         🧁 Ejemplo 5: Pastel
+         Cortaste un pastel y te comiste 0,5 del pastel.
 
-Eso significa que te comiste la mitad del pastel.""")
-    print("aqui tienes una lista de videos que te podran ayudar con tu problematica:")
-    print("")
-    print()
-elif ayuda==2:
-    print("Tema: la división")
-    print("a continuación te dejare un pequeño concepto")
-    print("")
+          Eso significa que te comiste la mitad del pastel.""")
+      print("aqui tienes una lista de videos que te podran ayudar con tu problematica:")
+      print("https://youtube.com/playlist?list=PLZjTheZ5n5YEZls66Ix1x-bYPGxRnqhmP&si=oNRlX_4EqH1NahML")
+      print("copia el enlace y pegalo en youtube")
+      l=input("Deseas volver al menu? (si o no)")
+if l=="si":
+        yes=True
+else:
+    print ("gracias por ejecutar")
+if ayuda==2:
+       print("Tema: la división")
+       print("a continuación te dejare un pequeño concepto")
+       print("""La división es una operación matemática que consiste en repartir una cantidad
+           en partes iguales o en averiguar cuántas veces un número (llamado divisor) cabe
+           dentro de otro (llamado dividendo). El resultado de una división se llama cociente,
+           y si al repartir sobran unidades, eso se llama residuo. """)
+       print("")
+       print("""aqui tinenes algunos ejemplos:
+
+         1. **10 ÷ 2 = 5**
+       (Si tienes 10 caramelos y los repartes entre 2 personas, a cada una le tocan 5).
+ 
+         2. **12 ÷ 3 = 4**
+       (Si hay 12 lápices y los divides en 3 grupos iguales, cada grupo tendrá 4 lápices).
+
+         3. **8 ÷ 4 = 2**
+       (Si tienes 8 galletas y haces 4 porciones iguales, cada porción tendrá 2 galletas).
+
+         4. **6 ÷ 1 = 6**
+       (Dividir entre 1 significa que el número se queda igual).
+
+         5. **9 ÷ 3 = 3**
+       (Repartir 9 cosas en 3 partes iguales da 3 en cada parte)""")
+    
+
+
