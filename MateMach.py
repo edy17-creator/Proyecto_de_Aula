@@ -104,7 +104,7 @@ while True:
     elif opcionusuario == 2:  # Docente
         print("\n¿Que desea realizar?")
         print(" > 1 ver resultados guardados")
-        print(" > 2 ")
+        print(" > 2 Buscar resultado especifico ")
         print(" > 3 ")
         opciondocente=int(input("diga su respuesta: "))
         
@@ -121,6 +121,22 @@ while True:
                 print("No se encontró el archivo de resultados.")
             
             input("\npresione enter para volver al menu principal...")
+
+        elif opciondocente==2:
+            nombre_buscar = input("Ingrese el nombre del estudiante a buscar: ")
+            with open("resultados_estudiantes.txt", "r") as archivo:
+                datos = archivo.read()
+                if nombre_buscar.lower() in datos.lower():
+                    print("Resultado encontrado:")
+                    lineas = datos.split("\n")
+                    for i in range(len(lineas)):
+                        if nombre_buscar.lower() in lineas[i].lower():
+                            print("\n".join(lineas[i:i+5]))  # Muestra nombre + ID + curso + edad + puntaje
+                else:
+                     print("No se encontró ese nombre.")
+
+            input("\npresione enter para volver al menu principal...")
+
 
     elif opcionusuario==3:
         print("hola mundo")
