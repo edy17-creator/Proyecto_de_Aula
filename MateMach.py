@@ -13,9 +13,7 @@ while True:
     print("")
     print("-1 Estudiante")
     print("-2 Docente")
-    print("-3 padre de familia")
-    print("-4 recepcionista")
-    print("-5 salir")
+    print("-3 salir")
 
     opcionusuario=int(input("Elija un tipo de usuario: "))
 
@@ -88,7 +86,6 @@ while True:
             
         print(f"\nObtuviste {puntos} de {len(preguntas)} respuestas correctas.")
 
-            # Guardar los resultados del estudiante
         print("Guardando resultados en el archivo...")
         with open("resultados_estudiantes.txt", "a") as archivo:
                 archivo.write(f"Nombre: {nombre}\n")
@@ -102,10 +99,12 @@ while True:
 
 
     elif opcionusuario == 2:  # Docente
-        print("\n¿Que desea realizar?")
-        print(" > 1 ver resultados guardados")
+        print("\n¿Que desea realizar? ")
+        print(" > 1 ver resultados guardados ")
         print(" > 2 Buscar resultado especifico ")
-        print(" > 3 ")
+        print(" > 3 Borrar los datos guardados ")
+        print(" > 4 ver estadisticas generales ")
+
         opciondocente=int(input("diga su respuesta: "))
         
         if opciondocente==1:
@@ -136,11 +135,45 @@ while True:
                      print("No se encontró ese nombre.")
 
             input("\npresione enter para volver al menu principal...")
+        
+        elif opciondocente==3:
+                confirmar = input("¿Está seguro que desea borrar todos los resultados? (si/no): ").lower()
+                if confirmar == "si":
+                    open("resultados_estudiantes.txt", "w").close()
+                    print("Todos los resultados han sido eliminados.")
+                else:
+                    print("Cancelado.")
+        
+        elif opciondocente==4:
+            print("\n-- Estadísticas generales --")
+            try:
+                with open("resultados_estudiantes.txt", "r") as archivo:
+                    puntos_totales = 0
+                    cantidad_estudiantes = 0
+                    puntajes = []
+                    
+                    for linea in archivo:
+                        if "Puntaje:" in linea:
+                            partes = linea.split()
+                            try:
+                                correcto = int(partes[1])
+                                puntajes.append(correcto)
+                                puntos_totales += correcto
+                                cantidad_estudiantes += 1
+                            except:
+                                continue  # Por si hay error de formato
+
+                    if cantidad_estudiantes > 0:
+                        promedio = puntos_totales / cantidad_estudiantes
+                        print(f"\nEstudiantes registrados: {cantidad_estudiantes}")
+                        print(f"Promedio de puntaje: {promedio:.2f}")
+                        print(f"Puntaje máximo: {max(puntajes)}")
+                        print(f"Puntaje mínimo: {min(puntajes)}")
+                    else:
+                        print("No hay puntajes registrados aún.")
+            except FileNotFoundError:
+                print("No se encontró el archivo de resultados.")
 
 
-    elif opcionusuario==3:
-        print("hola mundo")
-    elif opcionusuario==4:
-        print("hola mundo")
     else:
         print("Usted a salido de exitosamente ")
