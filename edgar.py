@@ -1,9 +1,15 @@
+
+import webbrowser
+url= "https://youtube.com/playlist?list=PLZjTheZ5n5YEZls66Ix1x-bYPGxRnqhmP&si=oNRlX_4EqH1NahML" 
 import os 
 def limpiar_pantalla():
     if os.name=='nt':
        os.system('cls')
     else:
        os.system('clear')
+
+
+
 
 print("bienvenido a nuestro programa")
 print("esta es una pagina dirigida a la educación matemática en los jovenes")
@@ -79,17 +85,14 @@ for i in range(len(preguntas)):
 
 # Resultado
 print(f"\nObtuviste {puntos} de {len(preguntas)} respuestas correctas.")
-yes=False
-while yes==True:
-  print("los temas disponibles son los siguientes:")
-  print("1 - decimales")
-  print("2 - division")
-  print("3 - Minimo comun multiplo")
-  print("4 - factorización")
-  print("5 - porcentajes")
-  print("6 - logaritmo")
-
-  ayuda=int(input("¿En que tema deseas que te ayude? "))
+print("los temas disponibles son los siguientes:")
+print("1 - decimales")
+print("2 - division")
+print("3 - Minimo comun multiplo")
+print("4 - factorización")
+print("5 - porcentajes")
+print("6 - logaritmo")
+ayuda=int(input("¿En que tema deseas que te ayude? "))
 limpiar_pantalla()
 if ayuda==1:
       print("Tema: los numeros decimales")
@@ -122,14 +125,13 @@ if ayuda==1:
          Cortaste un pastel y te comiste 0,5 del pastel.
 
           Eso significa que te comiste la mitad del pastel.""")
-      print("aqui tienes una lista de videos que te podran ayudar con tu problematica:")
-      print("https://youtube.com/playlist?list=PLZjTheZ5n5YEZls66Ix1x-bYPGxRnqhmP&si=oNRlX_4EqH1NahML")
-      print("copia el enlace y pegalo en youtube")
-      l=input("Deseas volver al menu? (si o no)")
-if l=="si":
-        yes=True
-else:
-    print ("gracias por ejecutar")
+      p=input("deseas ver algunos vicdeos para entender mejor (si o no)").lower()
+      if p=="si":
+          print("aqui tienes una lista de videos que te podran ayudar con tu problematica:")
+          webbrowser.open(url)
+      else:
+          print("espero que esta información hay sido de ayuda")
+          
 if ayuda==2:
        print("Tema: la división")
        print("a continuación te dejare un pequeño concepto")
@@ -154,6 +156,9 @@ if ayuda==2:
 
          5. **9 ÷ 3 = 3**
        (Repartir 9 cosas en 3 partes iguales da 3 en cada parte)""")
+       p=input("¿deseas ver algunos videos para reforzar lo aprendido?(si o no)")
+       if p=="si":
+           webbrowser.open()
     
 
 

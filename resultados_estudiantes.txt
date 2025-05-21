@@ -1,0 +1,30 @@
+Nombre: edgar
+ID: 1065855987
+Curso: 11
+Edad: 15
+Puntaje: 5 de 15
+----------------------------------------
+Nombre: edgar
+ID: 1065855987
+Curso: 11
+Edad: 17
+Puntaje: 5 de 15
+----------------------------------------
+Nombre: edgar
+ID: 1065855987
+Curso: 11
+Edad: 17
+Puntaje: 11 de 15
+----------------------------------------
+Nombre: edgar
+ID: 1065855987
+Curso: 11
+Edad: 17
+Puntaje: 4 de 15
+----------------------------------------
+Nombre: edgar
+ID: 321
+Curso: 11
+Edad: 17
+Puntaje: 4 de 15
+----------------------------------------
