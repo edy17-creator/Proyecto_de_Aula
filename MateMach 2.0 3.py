@@ -4,7 +4,7 @@ import time
 url= "https://youtube.com/playlist?list=PLZjTheZ5n5YEZls66Ix1x-bYPGxRnqhmP&si=oNRlX_4EqH1NahML" 
 div="https://youtu.be/mQ4wKV9_pZs?si=zwlpXULYgvjWAImC"
 por="https://youtu.be/RE3XoDORMys?si=KiTGi39yeH6s1tA5"
-ecu="https://www.youtube.com/watch?v=IHblqjW8RY8&t=2s"
+log="https://youtu.be/kcWwLcvb2-4?si=D5l_W1x5PJ8Bk-EB"
 mcm="https://youtu.be/txLlA_fyL5g?si=Y-G0Pd6bDN-v6cs6"
 
 def limpiar_pantalla():
@@ -302,97 +302,7 @@ while True:
                    x^3 + 27
                   Factorización:
                   (x + 3)(x^2 - 3x + 9)""")
-        elif ayuda==5:
-            print("tema:porcentajes")
-            print("""El porcentaje es una forma de expresar una proporción o parte de un total 
-                  como una fracción de 100. Se representa con el símbolo %. Por ejemplo, decir
-                   que un producto tiene un 20% de descuento significa que el precio se reduce
-                   en 20 partes de cada 100.""")
-            print("""
-               🧮 ¿Cómo se calcula un porcentaje?
 
-               1. **Sacar un porcentaje de un número
-
-               👉 Multiplica el número por el porcentaje y divide entre 100.
-
-                Ejemplo: ¿Cuál es el 25% de 200?
-
-
-                   200/(25/100)=50
-
-                  2. Saber qué porcentaje representa una cantidad de otra
-
-                  👉 Divide la parte entre el total y multiplica por 100.
-
-                  Ejemplo: Si 30 personas de 50 aprobaron:
-
-                  30/50(100)=60%
-
-                   3.Subir o bajar un número con un porcentaje
-
-                  Subir (aumentar):
-  
-                  Suma el porcentaje al 100% y multiplica.
-
-                     Ejemplo: Subir 100 en un 20%
-  
-                  100 * 1.20 = 120
-
-                  Bajar (descuento):
-                  Resta el porcentaje al 100% y multiplica.
-
-                  Ejemplo: Bajar 100 en un 20%
-
-                  100 * 0.80 = 80""")
-            p=input("¿deseas ver algunos videos para reforzar lo aprendido?(si o no) ").lower()
-            if p=="si":
-                 webbrowser.open(por)
-            else:
-                print("espero que la información haya sido util")
-        elif ayuda==6:
-            print("tema:ecuaciones")
-            print("""Una ecuación es una igualdad matemática que contiene una o más incógnitas
-                   y cuya solución consiste en encontrar los valores que hacen que ambos lados
-                   de la igualdad sean equivalentes.""")
-            print("""ejemplos: 
-                  1. x + 5 = 12
-
-                  Explicación: Queremos encontrar el valor de x que hace verdadera esta igualdad.
-
-                  Restamos 5 en ambos lados:
-
-                  x = 12 - 5
-
-                  x = 7
-
-                  Por lo tanto, x = 7 es la solución.""")
-            print("---------------------------------------------------------------------")
-            print("""2. 3y - 4 = 11
-
-                  Explicación: Primero sumamos 4 a ambos lados para eliminar el -4:
-
-                  3y = 11 + 4 → 3y = 15
-
-                  Luego dividimos entre 3:
-
-                  y = 15 / 3 → y = 5
-
-                  Así que la solución es y = 5.""")
-            print("""3. 2a + 3 = a + 9
-
-                  Explicación: Primero restamos a de ambos lados:
-
-                  2a - a + 3 = 9 → a + 3 = 9
-
-                  Luego restamos 3:
-
-                  a = 9 - 3 → a = 6
-
-                  Por lo tanto, a = 6 es la solución.""")
-            if p=="si":
-                 webbrowser.open(ecu)
-            else:
-                print("espero que la información haya sido util")
         input("\npresione enter para volver al menu principal...")
         limpiar_pantalla()
 
@@ -405,8 +315,7 @@ while True:
         print(" > 4 ver estadisticas generales ")
 
         opciondocente=int(input("diga su respuesta: "))
-        limpiar_pantalla()
-        time.sleep(1)
+        
         if opciondocente==1:
             print("\n-- Resultados de los estudiantes --")
             try:
@@ -420,11 +329,9 @@ while True:
                 print("No se encontró el archivo de resultados.")
             
             input("\npresione enter para volver al menu principal...")
-            limpiar_pantalla()
 
         elif opciondocente==2:
             nombre_buscar = input("Ingrese el nombre del estudiante a buscar: ")
-            time.sleep(1)
             with open("resultados_estudiantes.txt", "r") as archivo:
                 datos = archivo.read()
                 if nombre_buscar.lower() in datos.lower():
@@ -441,7 +348,6 @@ while True:
         
         elif opciondocente==3:
                 confirmar = input("¿Está seguro que desea borrar todos los resultados? (si/no): ").lower()
-                limpiar_pantalla()
                 if confirmar == "si":
                     open("resultados_estudiantes.txt", "w").close()
                     print("Todos los resultados han sido eliminados.")
