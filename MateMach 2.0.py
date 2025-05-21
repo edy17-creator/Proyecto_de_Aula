@@ -5,7 +5,7 @@ url= "https://youtube.com/playlist?list=PLZjTheZ5n5YEZls66Ix1x-bYPGxRnqhmP&si=oN
 div="https://youtu.be/mQ4wKV9_pZs?si=zwlpXULYgvjWAImC"
 por="https://youtu.be/RE3XoDORMys?si=KiTGi39yeH6s1tA5"
 log="https://youtu.be/kcWwLcvb2-4?si=D5l_W1x5PJ8Bk-EB"
-
+mcm="https://youtu.be/txLlA_fyL5g?si=Y-G0Pd6bDN-v6cs6"
 
 def limpiar_pantalla():
     if os.name=='nt':
@@ -192,6 +192,116 @@ while True:
                  webbrowser.open(div)
             else:
                 print("espero que la información haya sido util")
+        elif ayuda==3:
+            print("tema:minimo comun multiplo")
+            print("""El mínimo común múltiplo (MCM)** es el número entero positivo más pequeño que es
+                  múltiplo de dos o más números a la vez. Es decir, es el menor número que puede ser dividido
+                   exactamente por cada uno de esos números sin dejar residuo. El MCM se utiliza para encontrar
+                   un punto común en situaciones donde se requiere que varios elementos coincidan en ciclos o
+                   repeticiones, y es una herramienta fundamental en la resolución de problemas matemáticos
+                   relacionados con fracciones, tiempos y sincronización de eventos.""")
+            print("""ejemplos:
+                  Claro, aquí tienes **3 ejemplos de mínimo común múltiplo (MCM)**:
+
+                   1. MCM de 3 y 5:
+                   Los múltiplos comunes son 15, 30, 45...
+                   El MCM es 15.
+
+                   2. MCM de 6 y 8:
+                   Los múltiplos comunes son 24, 48, 72...
+                   El MCM es 24.
+
+                   3. MCM de 4, 6 y 12:
+                   Los múltiplos comunes son 12, 24, 36...
+                   El MCM es 12.""")
+            p=input("¿deseas ver algunos videos para reforzar lo aprendido?(si o no) ").lower()
+            if p=="si":
+                 webbrowser.open(mcm)
+            else:
+                print("espero que la información haya sido util")
+        elif ayuda==4:
+            print("tema:factorización")
+            print("""La factorización es el proceso de descomponer una expresión matemática en factores,
+                   similar a descomponer un número en sus factores primos. Es la operación inversa de la
+                   multiplicación, donde en lugar de multiplicar, se busca encontrar los componentes que,
+                   al multiplicarse, dan la expresión original. """)
+            print("""ejemplos: 
+
+                  1. Factor común
+
+                  Concepto:
+                  Consiste en sacar el mayor factor que sea común a todos los términos de la expresión.
+
+                  Ejemplo:
+                  6x + 9
+                  Factorización:
+                  3(2x + 3)
+                  El número 3 es común a ambos términos.
+
+                   2. Diferencia de cuadrados
+
+                   Concepto:
+
+                  Se aplica cuando tienes dos términos al cuadrado separados por un signo menos.
+
+                  La forma general es:
+
+                  a^2 - b^2 = (a - b)(a + b)
+
+                  Ejemplo:
+                  x^2 - 16
+                  Factorización:
+                  (x - 4)(x + 4)
+                  x^2 y 16 son cuadrados perfectos.
+
+                   3. Trinomio cuadrado perfecto
+
+                  Concepto:
+                  Es un trinomio que resulta del cuadrado de un binomio.
+
+                  Forma general:
+                  a^2 + 2ab + b^2 = (a + b)^2
+
+                   Ejemplo:
+                  x^2 + 6x + 9
+                  Factorización:
+                  (x + 3)^2
+                  x^2 es el cuadrado de x, 9 es el cuadrado de 3, y 6x = 2 * x * 3
+
+                   4. Trinomio de la forma x^2 + bx + c
+
+                  Concepto:
+
+                  Se busca dos números que sumen b y se multipliquen para dar c.
+
+                  Forma general:
+                  x^2 + bx + c = (x + m)(x + n) con m+n = b y m \cdot n = c
+
+                  Ejemplo:
+                  x^2 + 5x + 6 
+
+                  Factorización:
+                  (x + 2)(x + 3)
+                  2 + 3 = 5y 2 \cdot 3 = 6
+ 
+                  5. Suma o diferencia de cubos
+
+                  Concepto:
+                   Se usa cuando los términos son cubos perfectos.
+                   Formas:
+
+                   a^3 - b^3 = (a - b)(a^2 + ab + b^2)
+                   a^3 + b^3 = (a + b)(a^2 - ab + b^2)
+
+                  Ejemplo (diferencia):
+                  x^3 - 8
+                  Factorización:
+                  (x - 2)(x^2 + 2x + 4)
+
+                   Ejemplo (suma):
+                   x^3 + 27
+                  Factorización:
+                  (x + 3)(x^2 - 3x + 9)""")
 
         input("\npresione enter para volver al menu principal...")
         limpiar_pantalla()
