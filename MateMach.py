@@ -4,8 +4,9 @@ import time
 url= "https://youtube.com/playlist?list=PLZjTheZ5n5YEZls66Ix1x-bYPGxRnqhmP&si=oNRlX_4EqH1NahML" 
 div="https://youtu.be/mQ4wKV9_pZs?si=zwlpXULYgvjWAImC"
 por="https://youtu.be/RE3XoDORMys?si=KiTGi39yeH6s1tA5"
-log="https://youtu.be/kcWwLcvb2-4?si=D5l_W1x5PJ8Bk-EB"
-
+ecu="https://www.youtube.com/watch?v=IHblqjW8RY8&t=2s"
+mcm="https://youtu.be/txLlA_fyL5g?si=Y-G0Pd6bDN-v6cs6"
+fac="https://youtu.be/a8CUEopWCN0?si=hLSiUw2kgwhVjXS-"
 
 def limpiar_pantalla():
     if os.name=='nt':
@@ -192,7 +193,213 @@ while True:
                  webbrowser.open(div)
             else:
                 print("espero que la información haya sido util")
+        elif ayuda==3:
+            print("tema:minimo comun multiplo")
+            print("""El mínimo común múltiplo (MCM)** es el número entero positivo más pequeño que es
+                  múltiplo de dos o más números a la vez. Es decir, es el menor número que puede ser dividido
+                   exactamente por cada uno de esos números sin dejar residuo. El MCM se utiliza para encontrar
+                   un punto común en situaciones donde se requiere que varios elementos coincidan en ciclos o
+                   repeticiones, y es una herramienta fundamental en la resolución de problemas matemáticos
+                   relacionados con fracciones, tiempos y sincronización de eventos.""")
+            print("""ejemplos:
+                  Claro, aquí tienes **3 ejemplos de mínimo común múltiplo (MCM)**:
 
+                   1. MCM de 3 y 5:
+                   Los múltiplos comunes son 15, 30, 45...
+                   El MCM es 15.
+
+                   2. MCM de 6 y 8:
+                   Los múltiplos comunes son 24, 48, 72...
+                   El MCM es 24.
+
+                   3. MCM de 4, 6 y 12:
+                   Los múltiplos comunes son 12, 24, 36...
+                   El MCM es 12.""")
+            p=input("¿deseas ver algunos videos para reforzar lo aprendido?(si o no) ").lower()
+            if p=="si":
+                 webbrowser.open(mcm)
+            else:
+                print("espero que la información haya sido util")
+        elif ayuda==4:
+            print("tema:factorización")
+            print("""La factorización es el proceso de descomponer una expresión matemática en factores,
+                   similar a descomponer un número en sus factores primos. Es la operación inversa de la
+                   multiplicación, donde en lugar de multiplicar, se busca encontrar los componentes que,
+                   al multiplicarse, dan la expresión original. """)
+            print("""ejemplos: 
+
+                  1. Factor común
+
+                  Concepto:
+                  Consiste en sacar el mayor factor que sea común a todos los términos de la expresión.
+
+                  Ejemplo:
+                  6x + 9
+                  Factorización:
+                  3(2x + 3)
+                  El número 3 es común a ambos términos.
+
+                   2. Diferencia de cuadrados
+
+                   Concepto:
+
+                  Se aplica cuando tienes dos términos al cuadrado separados por un signo menos.
+
+                  La forma general es:
+
+                  a^2 - b^2 = (a - b)(a + b)
+
+                  Ejemplo:
+                  x^2 - 16
+                  Factorización:
+                  (x - 4)(x + 4)
+                  x^2 y 16 son cuadrados perfectos.
+
+                   3. Trinomio cuadrado perfecto
+
+                  Concepto:
+                  Es un trinomio que resulta del cuadrado de un binomio.
+
+                  Forma general:
+                  a^2 + 2ab + b^2 = (a + b)^2
+
+                   Ejemplo:
+                  x^2 + 6x + 9
+                  Factorización:
+                  (x + 3)^2
+                  x^2 es el cuadrado de x, 9 es el cuadrado de 3, y 6x = 2 * x * 3
+
+                   4. Trinomio de la forma x^2 + bx + c
+
+                  Concepto:
+
+                  Se busca dos números que sumen b y se multipliquen para dar c.
+
+                  Forma general:
+                  x^2 + bx + c = (x + m)(x + n) con m+n = b y m \cdot n = c
+
+                  Ejemplo:
+                  x^2 + 5x + 6 
+
+                  Factorización:
+                  (x + 2)(x + 3)
+                  2 + 3 = 5y 2 \cdot 3 = 6
+ 
+                  5. Suma o diferencia de cubos
+
+                  Concepto:
+                   Se usa cuando los términos son cubos perfectos.
+                   Formas:
+
+                   a^3 - b^3 = (a - b)(a^2 + ab + b^2)
+                   a^3 + b^3 = (a + b)(a^2 - ab + b^2)
+
+                  Ejemplo (diferencia):
+                  x^3 - 8
+                  Factorización:
+                  (x - 2)(x^2 + 2x + 4)
+
+                   Ejemplo (suma):
+                   x^3 + 27
+                  Factorización:
+                  (x + 3)(x^2 - 3x + 9)""")
+            p=input("¿deseas ver algunos videos para reforzar lo aprendido?(si o no) ").lower()
+            if p=="si":
+                 webbrowser.open(fac)
+            else:
+                print("espero que la información haya sido util")
+        elif ayuda==5:
+            print("tema:porcentajes")
+            print("""El porcentaje es una forma de expresar una proporción o parte de un total 
+                  como una fracción de 100. Se representa con el símbolo %. Por ejemplo, decir
+                   que un producto tiene un 20% de descuento significa que el precio se reduce
+                   en 20 partes de cada 100.""")
+            print("""
+               🧮 ¿Cómo se calcula un porcentaje?
+
+               1. **Sacar un porcentaje de un número
+
+               👉 Multiplica el número por el porcentaje y divide entre 100.
+
+                Ejemplo: ¿Cuál es el 25% de 200?
+
+
+                   200/(25/100)=50
+
+                  2. Saber qué porcentaje representa una cantidad de otra
+
+                  👉 Divide la parte entre el total y multiplica por 100.
+
+                  Ejemplo: Si 30 personas de 50 aprobaron:
+
+                  30/50(100)=60%
+
+                   3.Subir o bajar un número con un porcentaje
+
+                  Subir (aumentar):
+  
+                  Suma el porcentaje al 100% y multiplica.
+
+                     Ejemplo: Subir 100 en un 20%
+  
+                  100 * 1.20 = 120
+
+                  Bajar (descuento):
+                  Resta el porcentaje al 100% y multiplica.
+
+                  Ejemplo: Bajar 100 en un 20%
+
+                  100 * 0.80 = 80""")
+            p=input("¿deseas ver algunos videos para reforzar lo aprendido?(si o no) ").lower()
+            if p=="si":
+                 webbrowser.open(por)
+            else:
+                print("espero que la información haya sido util")
+        elif ayuda==6:
+            print("tema:ecuaciones")
+            print("""Una ecuación es una igualdad matemática que contiene una o más incógnitas
+                   y cuya solución consiste en encontrar los valores que hacen que ambos lados
+                   de la igualdad sean equivalentes.""")
+            print("""ejemplos: 
+                  1. x + 5 = 12
+
+                  Explicación: Queremos encontrar el valor de x que hace verdadera esta igualdad.
+
+                  Restamos 5 en ambos lados:
+
+                  x = 12 - 5
+
+                  x = 7
+
+                  Por lo tanto, x = 7 es la solución.""")
+            print("---------------------------------------------------------------------")
+            print("""2. 3y - 4 = 11
+
+                  Explicación: Primero sumamos 4 a ambos lados para eliminar el -4:
+
+                  3y = 11 + 4 → 3y = 15
+
+                  Luego dividimos entre 3:
+
+                  y = 15 / 3 → y = 5
+
+                  Así que la solución es y = 5.""")
+            print("""3. 2a + 3 = a + 9
+
+                  Explicación: Primero restamos a de ambos lados:
+
+                  2a - a + 3 = 9 → a + 3 = 9
+
+                  Luego restamos 3:
+
+                  a = 9 - 3 → a = 6
+
+                  Por lo tanto, a = 6 es la solución.""")
+            p=input("¿deseas ver algunos videos para reforzar lo aprendido?(si o no) ").lower()
+            if p=="si":
+                 webbrowser.open(ecu)
+            else:
+                print("espero que la información haya sido util")
         input("\npresione enter para volver al menu principal...")
         limpiar_pantalla()
 
@@ -205,7 +412,8 @@ while True:
         print(" > 4 ver estadisticas generales ")
 
         opciondocente=int(input("diga su respuesta: "))
-        
+        limpiar_pantalla()
+        time.sleep(1)
         if opciondocente==1:
             print("\n-- Resultados de los estudiantes --")
             try:
@@ -219,9 +427,11 @@ while True:
                 print("No se encontró el archivo de resultados.")
             
             input("\npresione enter para volver al menu principal...")
+            limpiar_pantalla()
 
         elif opciondocente==2:
             nombre_buscar = input("Ingrese el nombre del estudiante a buscar: ")
+            time.sleep(1)
             with open("resultados_estudiantes.txt", "r") as archivo:
                 datos = archivo.read()
                 if nombre_buscar.lower() in datos.lower():
@@ -238,6 +448,7 @@ while True:
         
         elif opciondocente==3:
                 confirmar = input("¿Está seguro que desea borrar todos los resultados? (si/no): ").lower()
+                limpiar_pantalla()
                 if confirmar == "si":
                     open("resultados_estudiantes.txt", "w").close()
                     print("Todos los resultados han sido eliminados.")
